@@ -1,226 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Janani R | Portfolio</title>
+    <meta charset="UTF-8">
+    <title>Janani R | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
-<style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Montserrat', sans-serif;
-}
+        body {
+            background: #f4f4f4;
+            color: #111;
+        }
 
-body{
-    background:#f5f5f5;
-    color:#111;
-}
+        section {
+            padding: 80px 10%;
+        }
 
-/* Section Style (Like Slides) */
-section{
-    min-height:100vh;
-    padding:80px 10%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
+        h1, h2 {
+            margin-bottom: 20px;
+        }
 
-/* Hero */
-.hero{
-    background:white;
-}
+        /* HERO SECTION */
+        .hero {
+            background: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-.hero h1{
-    font-size:80px;
-    font-weight:800;
-}
+        .hero h1 {
+            font-size: 70px;
+            font-weight: 800;
+        }
 
-.hero p{
-    margin-top:20px;
-    font-size:20px;
-    max-width:600px;
-}
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
 
-.contact-box{
-    margin-top:40px;
-    background:black;
-    color:white;
-    padding:25px;
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-}
+        .contact-box {
+            background: black;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
 
-/* About */
-.about{
-    background:#111;
-    color:white;
-}
+        /* ABOUT */
+        .about {
+            background: #111;
+            color: white;
+        }
 
-.about h2{
-    font-size:50px;
-    margin-bottom:30px;
-}
+        /* EDUCATION */
+        .education {
+            background: white;
+        }
 
-.about p{
-    max-width:800px;
-    line-height:1.7;
-}
+        /* SKILLS */
+        .skills {
+            background: #111;
+            color: white;
+        }
 
-/* Education */
-.education h2{
-    font-size:40px;
-    margin-bottom:20px;
-}
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
 
-/* Skills */
-.skills{
-    background:#111;
-    color:white;
-}
+        .skill-card {
+            border: 1px solid white;
+            padding: 20px;
+        }
 
-.skills h2{
-    font-size:40px;
-    margin-bottom:40px;
-}
+        /* PROJECTS */
+        .projects {
+            background: white;
+        }
 
-.skill-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
+        .project {
+            margin-bottom: 30px;
+        }
 
-.skill-card{
-    border:1px solid white;
-    padding:20px;
-}
+        /* FOOTER */
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
 
-/* Projects */
-.projects h2{
-    font-size:40px;
-    margin-bottom:40px;
-}
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+        }
 
-.project{
-    margin-bottom:40px;
-}
-
-.project h3{
-    font-size:22px;
-    margin-bottom:10px;
-}
-
-/* Footer */
-footer{
-    background:black;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-</style>
+    </style>
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
-<section class="hero">
-    <h1>PORTFOLIO</h1>
-    <p>JANANI R – Aspiring Data Scientist</p>
+    <!-- HERO -->
+    <section class="hero">
+        <h1>PORTFOLIO</h1>
+        <p>JANANI R – Aspiring Data Scientist</p>
 
-    <div class="contact-box">
-        <div>
-            📞 8438521423  
-            <br> 📧 jananiraguraman012@gmail.com
+        <div class="contact-box">
+            <p>📞 8438521423</p>
+            <p>📧 jananiraguraman012@gmail.com</p>
+            <p>GitHub: https://github.com/janani0673</p>
+            <p>LinkedIn: https://linkedin.com/in/janani-r-632a73290/</p>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <h2>Professional Summary</h2>
+        <p>
+            A passionate learner in the Data Science domain, focused on transforming raw data into meaningful insights.
+            Proficient in data analysis, preprocessing, and Machine Learning with hands-on experience using Python and modern tools.
+            Recognized for strong analytical thinking and problem-solving skills.
+        </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="education">
+        <h2>Education</h2>
+        <p><strong>B.Tech – Artificial Intelligence & Data Science</strong></p>
+        <p>Anna University Regional Campus, Coimbatore</p>
+        <p>CGPA: 7.9 (Up to 4th Semester)</p>
+        <p>2023 – 2027</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills">
+        <h2>Skills & Tools</h2>
+
+        <div class="skill-grid">
+            <div class="skill-card">
+                <h3>Technical Skills</h3>
+                Python, C, Machine Learning, Deep Learning, SQL, Visualization
+            </div>
+
+            <div class="skill-card">
+                <h3>Tools</h3>
+                Figma, GitHub, Google Colab, VS Code, Excel
+            </div>
+
+            <div class="skill-card">
+                <h3>Soft Skills</h3>
+                Presentation, Leadership, Communication, Problem Solving
+            </div>
+
+            <div class="skill-card">
+                <h3>Languages</h3>
+                Tamil, English
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>AI Disease Prediction – May 2025</h3>
+            <p>Decision Tree Classifier built with Scikit-learn and deployed using Flask.</p>
         </div>
 
-        <div>
-            🔗 GitHub: github.com/janani0673  
-            <br> 🔗 LinkedIn: linkedin.com/in/janani-r-632a73290/
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about">
-    <h2>PROFESSIONAL SUMMARY</h2>
-    <p>
-        A passionate learner in the Data Science domain, focused on transforming raw data into meaningful insights.
-        Proficient in data analysis, preprocessing, and Machine Learning with hands-on experience using Python and
-        modern data science tools. Recognized for strong analytical thinking, problem-solving skills, and applying
-        data-driven solutions to real-world challenges.
-    </p>
-</section>
-
-<!-- EDUCATION -->
-<section class="education">
-    <h2>EDUCATION</h2>
-    <p><strong>B.Tech – Artificial Intelligence & Data Science</strong></p>
-    <p>Anna University Regional Campus, Coimbatore</p>
-    <p>CGPA: 7.9 (Up to 4th Semester)</p>
-    <p>2023 – 2027</p>
-</section>
-
-<!-- SKILLS -->
-<section class="skills">
-    <h2>SKILLS & TOOLS</h2>
-
-    <div class="skill-grid">
-        <div class="skill-card">
-            <h3>Technical Skills</h3>
-            Python, C, Machine Learning, Deep Learning, SQL, Visualization
+        <div class="project">
+            <h3>Road Accident Severity Predictor – July 2025</h3>
+            <p>Random Forest model deployed using Streamlit with report generation.</p>
         </div>
 
-        <div class="skill-card">
-            <h3>Tools</h3>
-            Figma, GitHub, Google Colab, VS Code, Excel
+        <div class="project">
+            <h3>Pneumonia Detection – November 2025</h3>
+            <p>TensorFlow-based Deep Learning model for medical image classification.</p>
         </div>
 
-        <div class="skill-card">
-            <h3>Soft Skills</h3>
-            Presentation, Leadership, Communication, Problem Solving
+        <div class="project">
+            <h3>Heart Disease Prediction – January 2026</h3>
+            <p>Random Forest Classifier with Scikit-learn pipeline for early detection.</p>
         </div>
+    </section>
 
-        <div class="skill-card">
-            <h3>Languages</h3>
-            Tamil, English
-        </div>
-    </div>
-</section>
-
-<!-- PROJECTS -->
-<section class="projects">
-    <h2>PROJECTS</h2>
-
-    <div class="project">
-        <h3>AI Disease Prediction – May 2025</h3>
-        <p>Built using Decision Tree Classifier with Scikit-learn. Deployed using Flask for instant prediction results through web interface.</p>
-    </div>
-
-    <div class="project">
-        <h3>Road Accident Severity Predictor – July 2025</h3>
-        <p>Random Forest model with Streamlit deployment and report generation support.</p>
-    </div>
-
-    <div class="project">
-        <h3>Pneumonia Detection – November 2025</h3>
-        <p>Deep Learning project using TensorFlow to detect pneumonia from medical images with Streamlit interface.</p>
-    </div>
-
-    <div class="project">
-        <h3>Heart Disease Prediction – January 2026</h3>
-        <p>Random Forest Classifier with Scikit-learn pipeline for early disease risk detection.</p>
-    </div>
-</section>
-
-<footer>
-    © 2026 Janani R | Data Science Portfolio
-</footer>
+    <footer>
+        © 2026 Janani R | Portfolio
+    </footer>
 
 </body>
 </html>
