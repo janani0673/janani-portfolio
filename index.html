@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Janani R | Data Scientist</title>
+<title>Janani R | Data Professional</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* RESET */
 *{
 margin:0;
 padding:0;
@@ -19,34 +18,41 @@ scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#000000);
+background-size:400% 400%;
+animation:gradientBG 12s ease infinite;
 color:white;
-line-height:1.8;
+}
+
+@keyframes gradientBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
 /* NAVBAR */
 nav{
 position:fixed;
 width:100%;
-padding:20px 8%;
+padding:15px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(8px);
 z-index:1000;
 }
 
 nav h2{
 color:#00f5ff;
+letter-spacing:2px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:25px;
+margin-left:20px;
 transition:0.3s;
-font-weight:500;
 }
 
 nav a:hover{
@@ -55,72 +61,90 @@ color:#00f5ff;
 
 /* SECTIONS */
 section{
-padding:120px 8%;
+padding:90px 8%;
+border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
 h2{
 text-align:center;
-margin-bottom:60px;
+margin-bottom:40px;
 color:#00f5ff;
-font-size:32px;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero{
-height:100vh;
 display:flex;
 flex-direction:column;
-justify-content:center;
 align-items:center;
 text-align:center;
-padding-top:80px;
+margin-top:90px;
+}
+
+.image-wrapper{
+position:relative;
+width:200px;
+height:200px;
+margin-bottom:25px;
+}
+
+.image-wrapper::before{
+content:'';
+position:absolute;
+width:220px;
+height:220px;
+border-radius:50%;
+border:3px solid #00f5ff;
+top:-10px;
+left:-10px;
+animation:rotate 6s linear infinite;
+}
+
+@keyframes rotate{
+100%{transform:rotate(360deg);}
 }
 
 .profile-img{
-width:190px;
-height:190px;
+width:100%;
+height:100%;
 border-radius:50%;
 object-fit:cover;
-margin-bottom:25px;
-border:4px solid #00f5ff;
-box-shadow:0 0 30px #00f5ff;
-animation:float 3s ease-in-out infinite;
-transition:0.4s;
-}
-
-.profile-img:hover{
-transform:scale(1.1);
-box-shadow:0 0 60px white;
 }
 
 .hero h1{
-font-size:48px;
+font-size:40px;
 color:#00f5ff;
-text-shadow:0 0 20px #00f5ff;
-margin-bottom:15px;
+text-shadow:0 0 15px #00f5ff;
+margin-bottom:10px;
+}
+
+.typing{
+border-right:3px solid #00f5ff;
+white-space:nowrap;
+overflow:hidden;
+width:0;
+animation:typing 4s steps(50,end) forwards;
+}
+
+@keyframes typing{
+to{width:100%;}
 }
 
 .subtitle{
-font-size:22px;
-margin-bottom:30px;
+margin-top:15px;
+font-size:20px;
 }
 
-@keyframes float{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-12px);}
-}
-
-/* BUTTON */
+/* BUTTONS */
 .btn{
-padding:12px 30px;
-border-radius:30px;
+margin:15px 10px;
+padding:10px 25px;
 border:none;
+border-radius:25px;
 background:#00f5ff;
 color:black;
-font-weight:600;
 cursor:pointer;
-margin:10px;
-transition:0.4s;
+transition:0.3s;
+font-weight:600;
 }
 
 .btn:hover{
@@ -128,64 +152,23 @@ background:white;
 transform:scale(1.1);
 }
 
-/* CARD */
+/* CARDS */
 .card{
-background:rgba(255,255,255,0.08);
-padding:30px;
-border-radius:20px;
-margin-bottom:30px;
-backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:15px;
+margin-bottom:20px;
 transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 40px rgba(0,255,255,0.3);
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,255,255,0.3);
 }
-
-/* TIMELINE */
-.timeline{
-position:relative;
-max-width:1000px;
-margin:auto;
-}
-
-.timeline::after{
-content:'';
-position:absolute;
-width:4px;
-background:#00f5ff;
-top:0;
-bottom:0;
-left:50%;
-margin-left:-2px;
-}
-
-.timeline-item{
-padding:20px 40px;
-position:relative;
-width:50%;
-}
-
-.timeline-item:nth-child(odd){left:0;}
-.timeline-item:nth-child(even){left:50%;}
-
-.timeline-dot{
-position:absolute;
-width:20px;
-height:20px;
-background:#00f5ff;
-border-radius:50%;
-top:30px;
-box-shadow:0 0 15px #00f5ff;
-}
-
-.timeline-item:nth-child(odd) .timeline-dot{right:-10px;}
-.timeline-item:nth-child(even) .timeline-dot{left:-10px;}
 
 /* SKILLS */
 .skill{
-margin-bottom:30px;
+margin-bottom:20px;
 }
 
 .bar{
@@ -193,7 +176,6 @@ background:#222;
 height:8px;
 border-radius:5px;
 overflow:hidden;
-margin-top:8px;
 }
 
 .fill{
@@ -203,26 +185,11 @@ width:0;
 transition:2s;
 }
 
-/* PROJECTS */
-.project-card{
-background:rgba(255,255,255,0.05);
-padding:30px;
-border-radius:18px;
-margin-bottom:30px;
-transition:0.4s;
+/* RESPONSIVE */
+@media(max-width:768px){
+nav{
+flex-direction:column;
 }
-
-.project-card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 30px rgba(0,255,255,0.3);
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:30px;
-background:black;
-margin-top:50px;
 }
 
 </style>
@@ -233,26 +200,27 @@ margin-top:50px;
 <nav>
 <h2>JANANI R</h2>
 <div>
+<a href="#about">About</a>
 <a href="#education">Education</a>
-<a href="#internship">Internship</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
+<section class="hero" id="about">
 
-<img src="janani.jpeg" alt="Janani R" class="profile-img">
-
+<div class="image-wrapper">
+<img src="profile.jpg" alt="Janani R" class="profile-img">
+</div>
 
 <h1>👩‍💻 Hello, I'm Janani</h1>
 
-<p class="subtitle">
-Aspiring Data Scientist | Machine Learning Enthusiast 🚀
+<p class="typing subtitle">
+Aspiring Data Analyst | Data Visualization Specialist | Data Engineer 🚀
 </p>
 
+<div>
 <a href="https://github.com/janani0673" target="_blank">
 <button class="btn">🌐 GitHub</button>
 </a>
@@ -260,56 +228,28 @@ Aspiring Data Scientist | Machine Learning Enthusiast 🚀
 <a href="https://www.linkedin.com/in/janani-r-632a73290/" target="_blank">
 <button class="btn">💼 LinkedIn</button>
 </a>
+</div>
 
 </section>
 
-<!-- EDUCATION -->
 <section id="education">
 <h2>🎓 Education</h2>
 
-<div class="timeline">
-
-<div class="timeline-item">
-<div class="timeline-dot"></div>
 <div class="card">
-<h3>2023 – 2027</h3>
-<p><strong>B.Tech Artificial Intelligence and Data Science</strong></p>
+<h3>B.Tech – Artificial Intelligence & Data Science (2023–2027)</h3>
 <p>Anna University Regional Campus, Coimbatore</p>
-<p>CGPA: 7.9 (Up to 4th Semester)</p>
+<p>CGPA: 7.9</p>
 </div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-dot"></div>
-<div class="card">
-<h3>2022 – 2023</h3>
-<p><strong>HSC</strong></p>
-<p>V.R.P Higher Secondary School, Villupuram</p>
-<p>Percentage: 89.33%</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- INTERNSHIP -->
-<section id="internship">
-<h2>💼 Internship</h2>
 
 <div class="card">
-<h3>Data Science Domain – Sangam Soft Solutions</h3>
-<p>
-Built an end-to-end Road Accident Severity Prediction application
-by applying real-world data science workflows,
-from data preprocessing to model deployment.
-</p>
-<p><strong>Tech Stack:</strong> Python, Scikit-learn, Streamlit, Machine Learning</p>
+<h3>HSC – 89.33%</h3>
+<p>V.R.P Higher Secondary School</p>
 </div>
+
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
-<h2>🛠 Skills</h2>
+<h2>🛠 Technical Skills</h2>
 
 <div class="skill" data-value="90">
 <p>Python 🐍</p>
@@ -322,7 +262,7 @@ from data preprocessing to model deployment.
 </div>
 
 <div class="skill" data-value="80">
-<p>Deep Learning 🧠</p>
+<p>Data Visualization 📊</p>
 <div class="bar"><div class="fill"></div></div>
 </div>
 
@@ -331,65 +271,49 @@ from data preprocessing to model deployment.
 <div class="bar"><div class="fill"></div></div>
 </div>
 
+<div class="skill" data-value="70">
+<p>Data Engineering ⚙</p>
+<div class="bar"><div class="fill"></div></div>
+</div>
+
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
 <h2>🚀 Projects</h2>
 
-<div class="project-card">
-<h3>AI Disease Prediction — May 2025</h3>
-<p>
-Predicts diseases using Decision Tree (Scikit-learn).
-Data processed with Pandas & Matplotlib.
-Deployed using Flask for instant prediction.
-</p>
+<div class="card">
+<h3>AI Disease Prediction</h3>
+<p>Decision Tree model using Scikit-learn & Flask deployment.</p>
 </div>
 
-<div class="project-card">
-<h3>Road Accident Severity Predictor — July 2025</h3>
-<p>
-Random Forest model to classify accident severity.
-Data analyzed using Seaborn.
-Deployed as Streamlit app with report generation.
-</p>
+<div class="card">
+<h3>Road Accident Severity Predictor</h3>
+<p>Random Forest model deployed with Streamlit.</p>
 </div>
 
-<div class="project-card">
-<h3>Pneumonia Detection — November 2025</h3>
-<p>
-TensorFlow CNN model detects pneumonia from chest X-rays.
-Deployed using Streamlit with instant results.
-</p>
+<div class="card">
+<h3>Pneumonia Detection</h3>
+<p>TensorFlow CNN model for X-ray image classification.</p>
 </div>
 
-<div class="project-card">
-<h3>Heart Disease Prediction — January 2026</h3>
-<p>
-Random Forest model predicts heart disease risk.
-Uses Scikit-learn pipelines for preprocessing.
-Supports early clinical decision-making.
-</p>
+<div class="card">
+<h3>Heart Disease Prediction</h3>
+<p>Predictive analytics model for early clinical decision support.</p>
 </div>
 
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
 <h2>📩 Contact</h2>
+
 <div class="card">
-<p>📞 8438521423</p>
 <p>📧 jananiraguraman012@gmail.com</p>
+<p>📞 8438521423</p>
 </div>
+
 </section>
 
-<footer>
-© 2026 Janani R | Professional Portfolio ✨
-</footer>
-
 <script>
-
-/* SKILL BAR ANIMATION */
 window.addEventListener("scroll", ()=>{
 document.querySelectorAll(".skill").forEach(skill=>{
 const top = skill.getBoundingClientRect().top;
@@ -399,7 +323,6 @@ skill.querySelector(".fill").style.width = value + "%";
 }
 });
 });
-
 </script>
 
 </body>
