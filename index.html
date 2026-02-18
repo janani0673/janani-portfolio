@@ -24,7 +24,7 @@ color:white;
 line-height:1.8;
 }
 
-/* NAVIGATION */
+/* NAVBAR */
 nav{
 position:fixed;
 width:100%;
@@ -46,6 +46,7 @@ color:white;
 text-decoration:none;
 margin-left:25px;
 transition:0.3s;
+font-weight:500;
 }
 
 nav a:hover{
@@ -64,7 +65,7 @@ color:#00f5ff;
 font-size:32px;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero{
 height:100vh;
 display:flex;
@@ -72,19 +73,31 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+padding-top:80px;
+}
+
+.profile-img{
+width:190px;
+height:190px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:25px;
+border:4px solid #00f5ff;
+box-shadow:0 0 30px #00f5ff;
+animation:float 3s ease-in-out infinite;
+transition:0.4s;
+}
+
+.profile-img:hover{
+transform:scale(1.1);
+box-shadow:0 0 60px white;
 }
 
 .hero h1{
-font-size:50px;
+font-size:48px;
 color:#00f5ff;
 text-shadow:0 0 20px #00f5ff;
-animation:float 3s ease-in-out infinite;
-margin-bottom:20px;
-}
-
-@keyframes float{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-15px);}
+margin-bottom:15px;
 }
 
 .subtitle{
@@ -92,6 +105,12 @@ font-size:22px;
 margin-bottom:30px;
 }
 
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+}
+
+/* BUTTON */
 .btn{
 padding:12px 30px;
 border-radius:30px;
@@ -109,7 +128,7 @@ background:white;
 transform:scale(1.1);
 }
 
-/* GLASS CARD */
+/* CARD */
 .card{
 background:rgba(255,255,255,0.08);
 padding:30px;
@@ -203,6 +222,7 @@ footer{
 text-align:center;
 padding:30px;
 background:black;
+margin-top:50px;
 }
 
 </style>
@@ -223,8 +243,15 @@ background:black;
 
 <!-- HERO -->
 <section class="hero">
+
+<img src="janani.jpeg" alt="Janani R" class="profile-img">
+
+
 <h1>👩‍💻 Hello, I'm Janani</h1>
-<p class="subtitle">Aspiring Data Scientist | Machine Learning Enthusiast 🚀</p>
+
+<p class="subtitle">
+Aspiring Data Scientist | Machine Learning Enthusiast 🚀
+</p>
 
 <a href="https://github.com/janani0673" target="_blank">
 <button class="btn">🌐 GitHub</button>
@@ -233,6 +260,7 @@ background:black;
 <a href="https://www.linkedin.com/in/janani-r-632a73290/" target="_blank">
 <button class="btn">💼 LinkedIn</button>
 </a>
+
 </section>
 
 <!-- EDUCATION -->
@@ -245,7 +273,7 @@ background:black;
 <div class="timeline-dot"></div>
 <div class="card">
 <h3>2023 – 2027</h3>
-<p><strong>B-Tech Artificial Intelligence and Data Science</strong></p>
+<p><strong>B.Tech Artificial Intelligence and Data Science</strong></p>
 <p>Anna University Regional Campus, Coimbatore</p>
 <p>CGPA: 7.9 (Up to 4th Semester)</p>
 </div>
@@ -271,7 +299,8 @@ background:black;
 <div class="card">
 <h3>Data Science Domain – Sangam Soft Solutions</h3>
 <p>
-Built an end-to-end Road Accident Severity Prediction application by applying real-world data science workflows,
+Built an end-to-end Road Accident Severity Prediction application
+by applying real-world data science workflows,
 from data preprocessing to model deployment.
 </p>
 <p><strong>Tech Stack:</strong> Python, Scikit-learn, Streamlit, Machine Learning</p>
@@ -280,7 +309,7 @@ from data preprocessing to model deployment.
 
 <!-- SKILLS -->
 <section id="skills">
-<h2>🛠 Technical Skills</h2>
+<h2>🛠 Skills</h2>
 
 <div class="skill" data-value="90">
 <p>Python 🐍</p>
@@ -311,35 +340,34 @@ from data preprocessing to model deployment.
 <div class="project-card">
 <h3>AI Disease Prediction — May 2025</h3>
 <p>
-Uses Machine Learning to predict diseases from patient medical data.
-Processed using Pandas, visualized with Matplotlib,
-Decision Tree built with Scikit-learn,
-deployed using Flask for instant results.
+Predicts diseases using Decision Tree (Scikit-learn).
+Data processed with Pandas & Matplotlib.
+Deployed using Flask for instant prediction.
 </p>
 </div>
 
 <div class="project-card">
 <h3>Road Accident Severity Predictor — July 2025</h3>
 <p>
-Predicts accident severity using Random Forest.
+Random Forest model to classify accident severity.
 Data analyzed using Seaborn.
-Deployed as Streamlit application with report generation.
+Deployed as Streamlit app with report generation.
 </p>
 </div>
 
 <div class="project-card">
 <h3>Pneumonia Detection — November 2025</h3>
 <p>
-Deep Learning model using TensorFlow CNN to detect pneumonia
-from chest X-ray images with instant prediction.
+TensorFlow CNN model detects pneumonia from chest X-rays.
+Deployed using Streamlit with instant results.
 </p>
 </div>
 
 <div class="project-card">
 <h3>Heart Disease Prediction — January 2026</h3>
 <p>
-Predicts heart disease risk using Random Forest.
-Scikit-learn pipelines ensure accurate preprocessing.
+Random Forest model predicts heart disease risk.
+Uses Scikit-learn pipelines for preprocessing.
 Supports early clinical decision-making.
 </p>
 </div>
@@ -361,7 +389,7 @@ Supports early clinical decision-making.
 
 <script>
 
-/* Animate Skill Bars */
+/* SKILL BAR ANIMATION */
 window.addEventListener("scroll", ()=>{
 document.querySelectorAll(".skill").forEach(skill=>{
 const top = skill.getBoundingClientRect().top;
