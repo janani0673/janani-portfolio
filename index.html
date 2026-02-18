@@ -3,204 +3,224 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Janani R | Profile</title>
+<title>Janani R | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
+    font-family:'Montserrat', sans-serif;
 }
 
 body{
-    background:#f3f4f6;
+    background:#f5f5f5;
+    color:#111;
 }
 
-/* Main Section */
-.container{
-    display:flex;
+/* Section Style (Like Slides) */
+section{
     min-height:100vh;
-}
-
-/* Left Side */
-.left{
-    width:40%;
-    background:url('https://images.unsplash.com/photo-1603415526960-f7e0328e5f0e') no-repeat center;
-    background-size:cover;
-    position:relative;
-}
-
-.overlay{
-    position:absolute;
-    bottom:0;
-    background:rgba(70,70,180,0.85);
-    width:100%;
-    padding:30px;
-    color:white;
-}
-
-.overlay h2{
-    font-size:28px;
-    margin-bottom:10px;
-}
-
-/* Right Side */
-.right{
-    width:60%;
-    padding:60px;
-}
-
-.stats h1{
-    font-size:48px;
-    color:#4f46e5;
-}
-
-.stats p{
-    margin-bottom:30px;
-    color:gray;
-}
-
-.projects-completed{
-    font-size:36px;
-    color:#4f46e5;
-    margin-top:20px;
-}
-
-/* Experience Buttons */
-.experience{
-    margin:30px 0;
-}
-
-.exp-btn{
-    display:inline-block;
-    background:#4f46e5;
-    color:white;
-    padding:12px 25px;
-    border-radius:30px;
-    margin:10px 10px 0 0;
-    text-decoration:none;
-    font-weight:500;
-}
-
-/* Roles Section */
-.roles{
+    padding:80px 10%;
     display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+/* Hero */
+.hero{
+    background:white;
+}
+
+.hero h1{
+    font-size:80px;
+    font-weight:800;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:20px;
+    max-width:600px;
+}
+
+.contact-box{
     margin-top:40px;
-    gap:50px;
+    background:black;
+    color:white;
+    padding:25px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
 }
 
-.role{
-    width:50%;
+/* About */
+.about{
+    background:#111;
+    color:white;
 }
 
-.role h3{
-    margin-bottom:10px;
+.about h2{
+    font-size:50px;
+    margin-bottom:30px;
+}
+
+.about p{
+    max-width:800px;
+    line-height:1.7;
+}
+
+/* Education */
+.education h2{
+    font-size:40px;
+    margin-bottom:20px;
 }
 
 /* Skills */
 .skills{
-    margin-top:50px;
+    background:#111;
+    color:white;
 }
 
-.skill{
-    margin-bottom:20px;
+.skills h2{
+    font-size:40px;
+    margin-bottom:40px;
 }
 
-.skill-name{
-    margin-bottom:5px;
+.skill-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
-.skill-bar{
-    height:8px;
-    background:#ddd;
-    border-radius:10px;
+.skill-card{
+    border:1px solid white;
+    padding:20px;
 }
 
-.skill-level{
-    height:8px;
-    background:#4f46e5;
-    border-radius:10px;
+/* Projects */
+.projects h2{
+    font-size:40px;
+    margin-bottom:40px;
 }
+
+.project{
+    margin-bottom:40px;
+}
+
+.project h3{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+/* Footer */
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1>PORTFOLIO</h1>
+    <p>JANANI R – Aspiring Data Scientist</p>
 
-    <!-- LEFT SIDE -->
-    <div class="left">
-        <div class="overlay">
-            <h2>Janani R</h2>
-            <p>Aspiring Data Scientist | Machine Learning Enthusiast</p>
+    <div class="contact-box">
+        <div>
+            📞 8438521423  
+            <br> 📧 jananiraguraman012@gmail.com
+        </div>
+
+        <div>
+            🔗 GitHub: github.com/janani0673  
+            <br> 🔗 LinkedIn: linkedin.com/in/janani-r-632a73290/
         </div>
     </div>
+</section>
 
-    <!-- RIGHT SIDE -->
-    <div class="right">
+<!-- ABOUT -->
+<section class="about">
+    <h2>PROFESSIONAL SUMMARY</h2>
+    <p>
+        A passionate learner in the Data Science domain, focused on transforming raw data into meaningful insights.
+        Proficient in data analysis, preprocessing, and Machine Learning with hands-on experience using Python and
+        modern data science tools. Recognized for strong analytical thinking, problem-solving skills, and applying
+        data-driven solutions to real-world challenges.
+    </p>
+</section>
 
-        <div class="stats">
-            <h1>Fresher</h1>
-            <p>Data Science & Machine Learning</p>
+<!-- EDUCATION -->
+<section class="education">
+    <h2>EDUCATION</h2>
+    <p><strong>B.Tech – Artificial Intelligence & Data Science</strong></p>
+    <p>Anna University Regional Campus, Coimbatore</p>
+    <p>CGPA: 7.9 (Up to 4th Semester)</p>
+    <p>2023 – 2027</p>
+</section>
 
-            <div class="projects-completed">
-                4+ Projects Completed
-            </div>
+<!-- SKILLS -->
+<section class="skills">
+    <h2>SKILLS & TOOLS</h2>
+
+    <div class="skill-grid">
+        <div class="skill-card">
+            <h3>Technical Skills</h3>
+            Python, C, Machine Learning, Deep Learning, SQL, Visualization
         </div>
 
-        <div class="experience">
-            <a href="#" class="exp-btn">Heart Disease</a>
-            <a href="#" class="exp-btn">Accident Predictor</a>
-            <a href="#" class="exp-btn">Churn Model</a>
+        <div class="skill-card">
+            <h3>Tools</h3>
+            Figma, GitHub, Google Colab, VS Code, Excel
         </div>
 
-        <div class="roles">
-            <div class="role">
-                <h3>Machine Learning Developer</h3>
-                <p>Built classification models using Random Forest, Logistic Regression and CNN with deployment using Streamlit & Flask.</p>
-            </div>
-
-            <div class="role">
-                <h3>Data Analyst</h3>
-                <p>Performed data preprocessing, feature engineering, visualization and model evaluation using Python libraries.</p>
-            </div>
+        <div class="skill-card">
+            <h3>Soft Skills</h3>
+            Presentation, Leadership, Communication, Problem Solving
         </div>
 
-        <div class="skills">
-            <div class="skill">
-                <div class="skill-name">Python</div>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width:90%"></div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill-name">Machine Learning</div>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width:85%"></div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill-name">Streamlit</div>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width:80%"></div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill-name">TensorFlow</div>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width:75%"></div>
-                </div>
-            </div>
+        <div class="skill-card">
+            <h3>Languages</h3>
+            Tamil, English
         </div>
-
     </div>
-</div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects">
+    <h2>PROJECTS</h2>
+
+    <div class="project">
+        <h3>AI Disease Prediction – May 2025</h3>
+        <p>Built using Decision Tree Classifier with Scikit-learn. Deployed using Flask for instant prediction results through web interface.</p>
+    </div>
+
+    <div class="project">
+        <h3>Road Accident Severity Predictor – July 2025</h3>
+        <p>Random Forest model with Streamlit deployment and report generation support.</p>
+    </div>
+
+    <div class="project">
+        <h3>Pneumonia Detection – November 2025</h3>
+        <p>Deep Learning project using TensorFlow to detect pneumonia from medical images with Streamlit interface.</p>
+    </div>
+
+    <div class="project">
+        <h3>Heart Disease Prediction – January 2026</h3>
+        <p>Random Forest Classifier with Scikit-learn pipeline for early disease risk detection.</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Janani R | Data Science Portfolio
+</footer>
 
 </body>
 </html>
