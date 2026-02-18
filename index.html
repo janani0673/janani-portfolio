@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Janani R | Portfolio</title>
+<title>Janani R | Data Scientist</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,13 +17,21 @@
 }
 
 body{
-    font-family:'Inter',sans-serif;
-    background:#0d0d0d;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#000000);
+    background-size:400% 400%;
+    animation:gradient 15s ease infinite;
     color:white;
     overflow-x:hidden;
 }
 
-/* ===== NAVBAR ===== */
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* NAV */
 nav{
     position:fixed;
     width:100%;
@@ -31,13 +39,9 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(0,0,0,0.6);
+    background:rgba(0,0,0,0.4);
     backdrop-filter:blur(10px);
     z-index:1000;
-}
-
-nav h2{
-    font-weight:700;
 }
 
 nav a{
@@ -48,10 +52,10 @@ nav a{
 }
 
 nav a:hover{
-    color:#00e0ff;
+    color:#00f5ff;
 }
 
-/* ===== HERO SECTION ===== */
+/* HERO */
 .hero{
     height:100vh;
     display:flex;
@@ -59,90 +63,55 @@ nav a:hover{
     justify-content:center;
     align-items:center;
     text-align:center;
-    background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
 }
 
 .hero h1{
-    font-size:65px;
-    margin-bottom:10px;
+    font-size:60px;
 }
 
 .typing{
     font-size:24px;
-    color:#00e0ff;
+    margin-top:10px;
+    color:#00f5ff;
     height:30px;
 }
 
-.hero button{
-    margin-top:30px;
+.btn{
+    margin-top:20px;
     padding:12px 30px;
-    border:none;
     border-radius:30px;
-    background:#00e0ff;
+    border:none;
+    background:#00f5ff;
     font-weight:600;
     cursor:pointer;
     transition:0.4s;
 }
 
-.hero button:hover{
+.btn:hover{
     background:white;
     transform:scale(1.1);
 }
 
-/* ===== SECTION ===== */
+/* SECTION */
 section{
     padding:120px 8%;
 }
 
-/* ===== ABOUT ===== */
-.about{
-    text-align:center;
-    max-width:800px;
-    margin:auto;
-}
-
-/* ===== PROJECTS ===== */
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-    margin-top:50px;
-}
-
+/* CARDS */
 .card{
-    background:#1a1a1a;
-    padding:30px;
+    background:rgba(255,255,255,0.05);
+    padding:25px;
     border-radius:15px;
-    transition:0.5s;
-    position:relative;
-    overflow:hidden;
+    margin-bottom:20px;
+    transition:0.4s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 40px rgba(0,224,255,0.3);
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,255,255,0.3);
 }
 
-.card h3{
-    color:#00e0ff;
-    margin-bottom:10px;
-}
-
-.card button{
-    margin-top:15px;
-    padding:8px 20px;
-    border:none;
-    border-radius:20px;
-    background:#00e0ff;
-    cursor:pointer;
-    font-weight:600;
-}
-
-.card button:hover{
-    background:white;
-}
-
-/* ===== SKILLS BARS ===== */
+/* SKILL BARS */
 .skill{
     margin-bottom:20px;
 }
@@ -155,16 +124,16 @@ section{
 
 .fill{
     height:8px;
-    background:#00e0ff;
+    background:#00f5ff;
     border-radius:5px;
     width:0;
     transition:1.5s;
 }
 
-/* ===== SCROLL ANIMATION ===== */
+/* REVEAL */
 .reveal{
     opacity:0;
-    transform:translateY(50px);
+    transform:translateY(60px);
     transition:1s;
 }
 
@@ -187,126 +156,172 @@ footer{
 <nav>
     <h2>JANANI R</h2>
     <div>
-        <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
+<section class="hero">
     <h1>Hello, I'm Janani 👩‍💻</h1>
     <div class="typing" id="typing"></div>
 
     <a href="https://github.com/janani0673" target="_blank">
-        <button>View My GitHub</button>
+        <button class="btn">GitHub</button>
+    </a>
+
+    <a href="https://www.linkedin.com/in/janani-r-632a73290/" target="_blank">
+        <button class="btn">LinkedIn</button>
     </a>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="reveal">
-    <div class="about">
-        <h2>About Me</h2>
-        <p>
-            I am an aspiring Data Scientist passionate about building real-world Machine Learning applications.
-            I specialize in predictive modeling, classification problems, and deployment using Streamlit and Flask.
-        </p>
-    </div>
+<h2>Professional Summary</h2>
+<p>
+A passionate learner in Data Science focused on transforming raw data into meaningful insights.
+Proficient in Python, Machine Learning, Deep Learning, and deployment using Streamlit & Flask.
+Strong analytical thinker with practical problem-solving skills.
+</p>
+</section>
+
+<!-- EDUCATION -->
+<section class="reveal">
+<h2>Education</h2>
+<div class="card">
+B.Tech – Artificial Intelligence & Data Science<br>
+Anna University Regional Campus, Coimbatore<br>
+CGPA: 7.9 (Up to 4th Semester)<br>
+2023 – 2027
+</div>
 </section>
 
 <!-- SKILLS -->
+<section id="skills" class="reveal">
+<h2>Technical Skills</h2>
+
+<div class="skill">
+<p>Python</p>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<p>Machine Learning</p>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+<p>Deep Learning</p>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+<p>SQL</p>
+<div class="bar"><div class="fill" style="width:75%"></div></div>
+</div>
+
+</section>
+
+<!-- INTERNSHIP -->
 <section class="reveal">
-    <h2 style="text-align:center;margin-bottom:40px;">Skills</h2>
-
-    <div class="skill">
-        <p>Python</p>
-        <div class="bar"><div class="fill" style="width:90%"></div></div>
-    </div>
-
-    <div class="skill">
-        <p>Machine Learning</p>
-        <div class="bar"><div class="fill" style="width:85%"></div></div>
-    </div>
-
-    <div class="skill">
-        <p>TensorFlow</p>
-        <div class="bar"><div class="fill" style="width:80%"></div></div>
-    </div>
-
+<h2>Internship</h2>
+<div class="card">
+Data Science Intern – Sangam Soft Solutions<br><br>
+Built an end-to-end Road Accident Severity Prediction system from preprocessing to deployment.
+Tech Stack: Python, Scikit-learn, Streamlit.
+</div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-    <h2 style="text-align:center;">Projects</h2>
+<h2>Projects</h2>
 
-    <div class="projects">
+<div class="card reveal">
+<h3>AI Disease Prediction – May 2025</h3>
+<p>Decision Tree Classifier deployed using Flask for real-time disease prediction.</p>
+<a href="https://github.com/janani0673" target="_blank">
+<button class="btn">View Code</button>
+</a>
+</div>
 
-        <div class="card reveal">
-            <h3>Heart Disease Prediction</h3>
-            <p>Random Forest model deployed using Streamlit.</p>
-            <a href="https://github.com/janani0673" target="_blank">
-                <button>View Code</button>
-            </a>
-        </div>
+<div class="card reveal">
+<h3>Road Accident Severity Predictor – July 2025</h3>
+<p>Random Forest model deployed using Streamlit with report generation.</p>
+<a href="https://github.com/janani0673" target="_blank">
+<button class="btn">View Code</button>
+</a>
+</div>
 
-        <div class="card reveal">
-            <h3>Road Accident Severity</h3>
-            <p>Random Forest classification application.</p>
-            <a href="https://github.com/janani0673" target="_blank">
-                <button>View Code</button>
-            </a>
-        </div>
+<div class="card reveal">
+<h3>Pneumonia Detection – Nov 2025</h3>
+<p>TensorFlow CNN image classification model with upload interface.</p>
+<a href="https://github.com/janani0673" target="_blank">
+<button class="btn">View Code</button>
+</a>
+</div>
 
-        <div class="card reveal">
-            <h3>Pneumonia Detection</h3>
-            <p>Deep Learning CNN medical image classifier.</p>
-            <a href="https://github.com/janani0673" target="_blank">
-                <button>View Code</button>
-            </a>
-        </div>
+<div class="card reveal">
+<h3>Heart Disease Prediction – Jan 2026</h3>
+<p>Random Forest model using Scikit-learn pipelines for early risk detection.</p>
+<a href="https://github.com/janani0673" target="_blank">
+<button class="btn">View Code</button>
+</a>
+</div>
 
-    </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="reveal">
+<h2>Certifications</h2>
+<div class="card">IBM – Generative AI</div>
+<div class="card">Simplilearn – Excel Beginner</div>
+<div class="card">Novi Tech – UI/UX Design</div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="reveal">
-    <h2 style="text-align:center;">Contact</h2>
-    <p style="text-align:center;">📧 jananiraguraman012@gmail.com</p>
-    <p style="text-align:center;">🔗 linkedin.com/in/janani-r-632a73290/</p>
+<h2>Contact</h2>
+<p>📞 8438521423</p>
+<p>📧 jananiraguraman012@gmail.com</p>
+<p>
+<a href="https://github.com/janani0673" target="_blank" style="color:#00f5ff;">GitHub</a> |
+<a href="https://www.linkedin.com/in/janani-r-632a73290/" target="_blank" style="color:#00f5ff;">LinkedIn</a>
+</p>
 </section>
 
 <footer>
-    © 2026 Janani R | Modern Portfolio
+© 2026 Janani R | Premium Interactive Portfolio
 </footer>
 
 <script>
 
-/* Typing Effect */
-const words=["Aspiring Data Scientist","Machine Learning Enthusiast","AI Developer"];
+/* Typing Animation */
+const words=["Aspiring Data Scientist","Machine Learning Enthusiast","AI Developer","Data Analyst"];
 let i=0,j=0,current="",isDeleting=false;
 
 function type(){
-    current=words[i];
-    if(isDeleting){
-        document.getElementById("typing").textContent=current.substring(0,j--);
-        if(j<0){isDeleting=false;i=(i+1)%words.length;}
-    }else{
-        document.getElementById("typing").textContent=current.substring(0,j++);
-        if(j>current.length){isDeleting=true;setTimeout(type,1000);return;}
-    }
-    setTimeout(type,100);
+current=words[i];
+if(isDeleting){
+document.getElementById("typing").textContent=current.substring(0,j--);
+if(j<0){isDeleting=false;i=(i+1)%words.length;}
+}else{
+document.getElementById("typing").textContent=current.substring(0,j++);
+if(j>current.length){isDeleting=true;setTimeout(type,1000);return;}
+}
+setTimeout(type,100);
 }
 type();
 
 /* Scroll Reveal */
 window.addEventListener("scroll",()=>{
-    document.querySelectorAll(".reveal").forEach(el=>{
-        const top=el.getBoundingClientRect().top;
-        if(top<window.innerHeight-100){
-            el.classList.add("active");
-        }
-    });
+document.querySelectorAll(".reveal").forEach(el=>{
+const top=el.getBoundingClientRect().top;
+if(top<window.innerHeight-100){
+el.classList.add("active");
+}
+});
 });
 
 </script>
