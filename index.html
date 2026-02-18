@@ -1,123 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Janani | Data Scientist Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Janani R | Data Science Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* Navigation */
+nav{
+    position:fixed;
+    width:100%;
+    background:#111827;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+nav h2{
+    color:#38bdf8;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Sections */
+section{
+    padding:100px 10%;
+    min-height:100vh;
+}
+
+#home{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+#home h1{
+    font-size:48px;
+    color:#38bdf8;
+}
+
+#home p{
+    margin-top:15px;
+    font-size:18px;
+}
+
+/* Buttons */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#38bdf8;
+    color:black;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* Skills */
+.skills-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.skill-card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-5px);
+    background:#334155;
+}
+
+/* Projects */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.project-card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:scale(1.05);
+    background:#334155;
+}
+
+.project-card h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+/* Contact */
+.contact-links a{
+    display:block;
+    margin-top:15px;
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+}
+
+</style>
 </head>
+
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Janani R</h1>
-        <p>Aspiring Data Scientist | Machine Learning Enthusiast</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<nav>
+    <h2>Janani R</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am an aspiring Data Scientist passionate about building real-world 
-            Machine Learning applications. I have experience in developing and 
-            deploying ML models using Python, Streamlit, and Flask.
-        </p>
-    </section>
+<section id="home">
+    <h1>Aspiring Data Scientist</h1>
+    <p>Machine Learning Enthusiast building real-world AI solutions.</p>
+    <a href="https://github.com/yourusername" target="_blank" class="btn">GitHub</a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn">LinkedIn</a>
+</section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skills-container">
-            <div>
-                <h3>Programming</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>SQL</li>
-                </ul>
-            </div>
+<section id="about">
+    <h2>About Me</h2>
+    <p style="margin-top:20px;">
+        I am an aspiring Data Scientist with hands-on experience in building end-to-end Machine Learning projects.
+        I specialize in predictive modeling, classification problems, and deploying ML applications using Streamlit and Flask.
+    </p>
+</section>
 
-            <div>
-                <h3>Machine Learning</h3>
-                <ul>
-                    <li>Logistic Regression</li>
-                    <li>Random Forest</li>
-                    <li>Decision Tree</li>
-                    <li>CNN</li>
-                </ul>
-            </div>
+<section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-list">
+        <div class="skill-card">Python</div>
+        <div class="skill-card">SQL</div>
+        <div class="skill-card">Logistic Regression</div>
+        <div class="skill-card">Random Forest</div>
+        <div class="skill-card">Decision Tree</div>
+        <div class="skill-card">CNN</div>
+        <div class="skill-card">Pandas</div>
+        <div class="skill-card">NumPy</div>
+        <div class="skill-card">Scikit-learn</div>
+        <div class="skill-card">TensorFlow</div>
+        <div class="skill-card">Streamlit</div>
+        <div class="skill-card">Flask</div>
+        <div class="skill-card">Git & GitHub</div>
+    </div>
+</section>
 
-            <div>
-                <h3>Tools & Libraries</h3>
-                <ul>
-                    <li>Pandas</li>
-                    <li>NumPy</li>
-                    <li>Scikit-learn</li>
-                    <li>TensorFlow</li>
-                    <li>Streamlit</li>
-                    <li>Flask</li>
-                    <li>Git & GitHub</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
 
         <div class="project-card">
             <h3>Heart Disease Prediction</h3>
-            <p>
-                Built a Machine Learning model using Random Forest and Logistic Regression 
-                to predict heart disease. Deployed using Streamlit with login authentication 
-                and PDF report generation.
-            </p>
+            <p>Random Forest & Logistic Regression model deployed using Streamlit with authentication and PDF report generation.</p>
         </div>
 
         <div class="project-card">
             <h3>Road Accident Severity Predictor</h3>
-            <p>
-                Developed a Random Forest model to classify accident severity levels. 
-                Created a multi-page Streamlit application with data visualization 
-                and PDF report generation.
-            </p>
+            <p>Random Forest classification model with multi-page Streamlit app and data visualization.</p>
         </div>
 
         <div class="project-card">
             <h3>Pneumonia Detection using CNN</h3>
-            <p>
-                Built an image classification model using TensorFlow CNN to detect 
-                pneumonia from chest X-ray images with high accuracy.
-            </p>
+            <p>TensorFlow CNN image classification model to detect pneumonia from chest X-ray images.</p>
         </div>
 
         <div class="project-card">
             <h3>Customer Churn Prediction</h3>
-            <p>
-                Developed a churn prediction model using Random Forest and deployed 
-                using Flask API with one-hot encoding and model serialization.
-            </p>
+            <p>Random Forest churn prediction model deployed using Flask API with One-Hot Encoding.</p>
         </div>
 
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: yourmail@gmail.com</p>
-        <p>GitHub: github.com/yourusername</p>
-        <p>LinkedIn: linkedin.com/in/yourprofile</p>
-    </section>
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-links">
+        <a href="mailto:yourmail@gmail.com">Email: yourmail@gmail.com</a>
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    </div>
+</section>
 
-    <footer>
-        <p>© 2026 Janani R | Portfolio</p>
-    </footer>
+<footer>
+    © 2026 Janani R | Data Science Portfolio
+</footer>
 
 </body>
 </html>
