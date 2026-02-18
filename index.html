@@ -2,265 +2,114 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Janani R | Data Scientist</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<title>Janani R | Portfolio</title>
+<link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-font-family:'Poppins',sans-serif;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:white;
-overflow-x:hidden;
-}
-
-/* NAVBAR */
-nav{
-position:fixed;
-width:100%;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-
-nav h2{
-color:#00f5ff;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#00f5ff;
-}
-
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-.hero h1{
-font-size:55px;
-animation:float 3s ease-in-out infinite;
-}
-
-@keyframes float{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-15px);}
-}
-
-.typing{
-margin-top:10px;
-font-size:22px;
-color:#00f5ff;
-height:30px;
-}
-
-.btn{
-margin-top:20px;
-padding:12px 30px;
-border:none;
-border-radius:30px;
-background:#00f5ff;
-font-weight:600;
-cursor:pointer;
-transition:0.4s;
-}
-
-.btn:hover{
-background:white;
-transform:scale(1.1);
-box-shadow:0 0 20px #00f5ff;
-}
-
-/* SECTION */
-section{
-padding:120px 8%;
-}
-
-h2{
-margin-bottom:40px;
-color:#00f5ff;
-}
-
-/* GLASS CARD */
-.card{
-background:rgba(255,255,255,0.08);
-padding:30px;
-border-radius:20px;
-backdrop-filter:blur(10px);
-margin-bottom:30px;
-transition:0.5s;
-}
-
-.card:hover{
-transform:translateY(-15px);
-box-shadow:0 25px 50px rgba(0,255,255,0.4);
-}
-
-/* SKILL BARS */
-.skill{
-margin-bottom:25px;
-}
-
-.skill p{
-margin-bottom:5px;
-}
-
-.bar{
-background:#222;
-height:8px;
-border-radius:5px;
-overflow:hidden;
-}
-
-.fill{
-height:8px;
-background:#00f5ff;
-width:0;
-transition:2s;
-}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-/* REVEAL */
-.reveal{
-opacity:0;
-transform:translateY(60px);
-transition:1s;
-}
-
-.reveal.active{
-opacity:1;
-transform:translateY(0);
-}
-
-footer{
-text-align:center;
-padding:30px;
-background:black;
-}
-
-</style>
 </head>
 
 <body>
 
 <nav>
-<h2>JANANI R</h2>
-<div>
-<a href="#about">About</a>
-<a href="#internship">Internship</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</div>
+    <h2>JANANI R</h2>
+    <div>
+        <a href="#education">Education</a>
+        <a href="#internship">Internship</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-<h1>Hello, I'm Janani 👩‍💻</h1>
-<div class="typing" id="typing"></div>
-
-<a href="https://github.com/janani0673" target="_blank">
-<button class="btn">GitHub</button>
-</a>
-
-<a href="https://www.linkedin.com/in/janani-r-632a73290/" target="_blank">
-<button class="btn">LinkedIn</button>
-</a>
+    <h1>Hello, I'm Janani 👩‍💻</h1>
+    <p class="subtitle">Aspiring Data Scientist | Machine Learning Enthusiast</p>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="reveal">
-<h2>Professional Summary</h2>
-<div class="card">
-<p>
-A passionate Data Science enthusiast with hands-on experience in Machine Learning, Deep Learning, and real-world deployment projects.
-Strong analytical mindset with the ability to transform complex datasets into meaningful insights and impactful solutions.
-</p>
+<!-- EDUCATION -->
+<section id="education">
+<h2>Education</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>2023 – 2027</h3>
+<h4>B-Tech [Artificial Intelligence and Data Science]</h4>
+<p>Anna University Regional Campus, Coimbatore</p>
+<p><strong>CGPA:</strong> 7.9 (Up to 4th Semester)</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>2022 – 2023</h3>
+<h4>HSC</h4>
+<p>V.R.P Higher Secondary School, Villupuram</p>
+<p><strong>Percentage:</strong> 89.33%</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>2020 – 2021</h3>
+<h4>SSLC</h4>
+<p>V.R.P Higher Secondary School, Villupuram</p>
+<p><strong>Result:</strong> All Pass (COVID Batch)</p>
+</div>
+</div>
+
 </div>
 </section>
 
 <!-- INTERNSHIP -->
-<section id="internship" class="reveal">
-<h2>Internship Experience</h2>
+<section id="internship">
+<h2>Internship</h2>
 
 <div class="card">
-<h3>DATA SCIENCE DOMAIN – SANGAM SOFT SOLUTIONS</h3>
+<h3>Data Science Domain – Sangam Soft Solutions</h3>
 <p>
 Built an end-to-end Road Accident Severity Prediction application by applying real-world data science workflows,
 from data preprocessing to model deployment.
 Demonstrated strong analytical thinking, practical problem-solving skills,
-and the ability to transform data into impactful solutions.
+and ability to transform data into impactful solutions.
 </p>
-<br>
 <p><strong>Tech Stack:</strong> Python, Scikit-learn, Streamlit, Machine Learning</p>
 </div>
 
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="reveal">
+<section id="skills">
 <h2>Technical Skills</h2>
 
 <div class="skill">
 <p>Python</p>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
+<div class="bar"><div class="fill python"></div></div>
 </div>
 
 <div class="skill">
 <p>Machine Learning</p>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
+<div class="bar"><div class="fill ml"></div></div>
 </div>
 
 <div class="skill">
 <p>Deep Learning</p>
-<div class="bar"><div class="fill" style="width:80%"></div></div>
+<div class="bar"><div class="fill dl"></div></div>
 </div>
 
 <div class="skill">
 <p>SQL</p>
-<div class="bar"><div class="fill" style="width:75%"></div></div>
-</div>
-
-<div class="skill">
-<p>C Programming</p>
-<div class="bar"><div class="fill" style="width:70%"></div></div>
+<div class="bar"><div class="fill sql"></div></div>
 </div>
 
 </section>
 
 <!-- TOOLS -->
-<section class="reveal">
+<section>
 <h2>Tools</h2>
-
 <div class="grid">
 <div class="card">Figma</div>
 <div class="card">GitHub</div>
@@ -268,69 +117,30 @@ and the ability to transform data into impactful solutions.
 <div class="card">Visual Studio Code</div>
 <div class="card">Excel</div>
 </div>
-
 </section>
 
 <!-- SOFT SKILLS -->
-<section class="reveal">
+<section>
 <h2>Soft Skills</h2>
-
 <div class="grid">
 <div class="card">Presentation</div>
 <div class="card">Leadership</div>
 <div class="card">Communication</div>
 <div class="card">Problem Solving</div>
 </div>
-
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="reveal">
+<section id="contact">
 <h2>Contact</h2>
 <div class="card">
 <p>📞 8438521423</p>
 <p>📧 jananiraguraman012@gmail.com</p>
-<p>
-<a href="https://github.com/janani0673" target="_blank" style="color:#00f5ff;">GitHub</a> |
-<a href="https://www.linkedin.com/in/janani-r-632a73290/" target="_blank" style="color:#00f5ff;">LinkedIn</a>
-</p>
 </div>
 </section>
 
 <footer>
-© 2026 Janani R | Professional Data Science Portfolio
+© 2026 Janani R | Professional Portfolio
 </footer>
-
-<script>
-
-/* Typing Animation */
-const words=["Aspiring Data Scientist","Machine Learning Enthusiast","AI Developer","Data Analyst"];
-let i=0,j=0,current="",isDeleting=false;
-
-function type(){
-current=words[i];
-if(isDeleting){
-document.getElementById("typing").textContent=current.substring(0,j--);
-if(j<0){isDeleting=false;i=(i+1)%words.length;}
-}else{
-document.getElementById("typing").textContent=current.substring(0,j++);
-if(j>current.length){isDeleting=true;setTimeout(type,1000);return;}
-}
-setTimeout(type,100);
-}
-type();
-
-/* Scroll Reveal */
-window.addEventListener("scroll",()=>{
-document.querySelectorAll(".reveal").forEach(el=>{
-const top=el.getBoundingClientRect().top;
-if(top<window.innerHeight-100){
-el.classList.add("active");
-}
-});
-});
-
-</script>
 
 </body>
 </html>
