@@ -2,122 +2,139 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Janani R | Data Science Portfolio</title>
+<title>Janani R | Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
-
-body{
-    background:#0f0f0f;
-    color:white;
     scroll-behavior:smooth;
 }
 
-/* NAVIGATION */
+body{
+    font-family:'Inter',sans-serif;
+    background:#0d0d0d;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ===== NAVBAR ===== */
 nav{
     position:fixed;
     width:100%;
-    background:black;
-    padding:15px 10%;
+    padding:20px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
     z-index:1000;
+}
+
+nav h2{
+    font-weight:700;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:20px;
+    margin-left:25px;
     transition:0.3s;
 }
 
 nav a:hover{
-    color:#00f5ff;
+    color:#00e0ff;
 }
 
-/* HERO */
+/* ===== HERO SECTION ===== */
 .hero{
     height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    padding:0 10%;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
 }
 
 .hero h1{
-    font-size:60px;
+    font-size:65px;
+    margin-bottom:10px;
 }
 
 .typing{
-    color:#00f5ff;
-    font-size:28px;
-    margin-top:10px;
+    font-size:24px;
+    color:#00e0ff;
+    height:30px;
 }
 
-/* BUTTON */
-.btn{
-    margin-top:25px;
-    padding:12px 25px;
-    background:#00f5ff;
+.hero button{
+    margin-top:30px;
+    padding:12px 30px;
     border:none;
-    color:black;
+    border-radius:30px;
+    background:#00e0ff;
     font-weight:600;
     cursor:pointer;
-    border-radius:30px;
-    transition:0.3s;
+    transition:0.4s;
 }
 
-.btn:hover{
+.hero button:hover{
     background:white;
-    transform:scale(1.05);
+    transform:scale(1.1);
 }
 
-/* SECTION */
+/* ===== SECTION ===== */
 section{
-    padding:100px 10%;
+    padding:120px 8%;
 }
 
-/* PROJECTS */
+/* ===== ABOUT ===== */
+.about{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+}
+
+/* ===== PROJECTS ===== */
 .projects{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-top:50px;
 }
 
 .card{
     background:#1a1a1a;
-    padding:25px;
+    padding:30px;
     border-radius:15px;
-    transition:0.4s;
+    transition:0.5s;
     position:relative;
     overflow:hidden;
 }
 
 .card:hover{
     transform:translateY(-10px);
-    box-shadow:0 10px 30px rgba(0,255,255,0.3);
+    box-shadow:0 20px 40px rgba(0,224,255,0.3);
 }
 
 .card h3{
+    color:#00e0ff;
     margin-bottom:10px;
 }
 
 .card button{
     margin-top:15px;
-    padding:8px 18px;
+    padding:8px 20px;
     border:none;
-    background:#00f5ff;
-    cursor:pointer;
     border-radius:20px;
+    background:#00e0ff;
+    cursor:pointer;
     font-weight:600;
 }
 
@@ -125,44 +142,53 @@ section{
     background:white;
 }
 
-/* ANIMATION */
-.hidden{
-    opacity:0;
-    transform:translateY(40px);
-    transition:all 1s;
+/* ===== SKILLS BARS ===== */
+.skill{
+    margin-bottom:20px;
 }
 
-.show{
+.bar{
+    background:#333;
+    height:8px;
+    border-radius:5px;
+}
+
+.fill{
+    height:8px;
+    background:#00e0ff;
+    border-radius:5px;
+    width:0;
+    transition:1.5s;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+
+.reveal.active{
     opacity:1;
     transform:translateY(0);
 }
 
-/* COUNTER */
-.counter-section{
-    display:flex;
-    justify-content:space-around;
-    text-align:center;
-}
-
-.counter h2{
-    font-size:40px;
-    color:#00f5ff;
-}
-
 footer{
     text-align:center;
-    padding:20px;
+    padding:30px;
     background:black;
 }
+
 </style>
 </head>
 
 <body>
 
 <nav>
-    <h2>Janani R</h2>
+    <h2>JANANI R</h2>
     <div>
         <a href="#home">Home</a>
+        <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </div>
@@ -172,52 +198,69 @@ footer{
 <section class="hero" id="home">
     <h1>Hello, I'm Janani 👩‍💻</h1>
     <div class="typing" id="typing"></div>
+
     <a href="https://github.com/janani0673" target="_blank">
-        <button class="btn">Visit My GitHub</button>
+        <button>View My GitHub</button>
     </a>
 </section>
 
-<!-- COUNTERS -->
-<section class="counter-section hidden">
-    <div class="counter">
-        <h2 id="projectsCount">0</h2>
-        <p>Projects</p>
+<!-- ABOUT -->
+<section id="about" class="reveal">
+    <div class="about">
+        <h2>About Me</h2>
+        <p>
+            I am an aspiring Data Scientist passionate about building real-world Machine Learning applications.
+            I specialize in predictive modeling, classification problems, and deployment using Streamlit and Flask.
+        </p>
     </div>
-    <div class="counter">
-        <h2 id="skillsCount">0</h2>
-        <p>Skills</p>
+</section>
+
+<!-- SKILLS -->
+<section class="reveal">
+    <h2 style="text-align:center;margin-bottom:40px;">Skills</h2>
+
+    <div class="skill">
+        <p>Python</p>
+        <div class="bar"><div class="fill" style="width:90%"></div></div>
     </div>
-    <div class="counter">
-        <h2 id="certCount">0</h2>
-        <p>Certifications</p>
+
+    <div class="skill">
+        <p>Machine Learning</p>
+        <div class="bar"><div class="fill" style="width:85%"></div></div>
     </div>
+
+    <div class="skill">
+        <p>TensorFlow</p>
+        <div class="bar"><div class="fill" style="width:80%"></div></div>
+    </div>
+
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-    <h2 style="margin-bottom:40px;">My Projects</h2>
+    <h2 style="text-align:center;">Projects</h2>
 
     <div class="projects">
 
-        <div class="card hidden">
+        <div class="card reveal">
             <h3>Heart Disease Prediction</h3>
-            <p>Random Forest & Logistic Regression model deployed using Streamlit.</p>
+            <p>Random Forest model deployed using Streamlit.</p>
             <a href="https://github.com/janani0673" target="_blank">
                 <button>View Code</button>
             </a>
         </div>
 
-        <div class="card hidden">
+        <div class="card reveal">
             <h3>Road Accident Severity</h3>
-            <p>Random Forest classifier with multi-page Streamlit app.</p>
+            <p>Random Forest classification application.</p>
             <a href="https://github.com/janani0673" target="_blank">
                 <button>View Code</button>
             </a>
         </div>
 
-        <div class="card hidden">
+        <div class="card reveal">
             <h3>Pneumonia Detection</h3>
-            <p>TensorFlow CNN model for medical image classification.</p>
+            <p>Deep Learning CNN medical image classifier.</p>
             <a href="https://github.com/janani0673" target="_blank">
                 <button>View Code</button>
             </a>
@@ -227,56 +270,44 @@ footer{
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="hidden">
-    <h2>Contact Me</h2>
-    <p>Email: jananiraguraman012@gmail.com</p>
-    <p>LinkedIn: linkedin.com/in/janani-r-632a73290/</p>
+<section id="contact" class="reveal">
+    <h2 style="text-align:center;">Contact</h2>
+    <p style="text-align:center;">📧 jananiraguraman012@gmail.com</p>
+    <p style="text-align:center;">🔗 linkedin.com/in/janani-r-632a73290/</p>
 </section>
 
 <footer>
-    © 2026 Janani R | Data Science Portfolio
+    © 2026 Janani R | Modern Portfolio
 </footer>
 
 <script>
 
 /* Typing Effect */
-const text = "Aspiring Data Scientist | Machine Learning Enthusiast";
-let i = 0;
-function typingEffect(){
-    if(i < text.length){
-        document.getElementById("typing").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typingEffect,50);
-    }
-}
-typingEffect();
+const words=["Aspiring Data Scientist","Machine Learning Enthusiast","AI Developer"];
+let i=0,j=0,current="",isDeleting=false;
 
-/* Scroll Animation */
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add("show");
+function type(){
+    current=words[i];
+    if(isDeleting){
+        document.getElementById("typing").textContent=current.substring(0,j--);
+        if(j<0){isDeleting=false;i=(i+1)%words.length;}
+    }else{
+        document.getElementById("typing").textContent=current.substring(0,j++);
+        if(j>current.length){isDeleting=true;setTimeout(type,1000);return;}
+    }
+    setTimeout(type,100);
+}
+type();
+
+/* Scroll Reveal */
+window.addEventListener("scroll",()=>{
+    document.querySelectorAll(".reveal").forEach(el=>{
+        const top=el.getBoundingClientRect().top;
+        if(top<window.innerHeight-100){
+            el.classList.add("active");
         }
     });
 });
-
-document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
-
-/* Counter Animation */
-function animateCounter(id, end){
-    let start = 0;
-    let interval = setInterval(() => {
-        start++;
-        document.getElementById(id).innerText = start;
-        if(start >= end){
-            clearInterval(interval);
-        }
-    }, 50);
-}
-
-animateCounter("projectsCount", 4);
-animateCounter("skillsCount", 10);
-animateCounter("certCount", 3);
 
 </script>
 
