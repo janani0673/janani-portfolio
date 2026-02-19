@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Janani R | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- SIDEBAR -->
+<!-- Sidebar -->
 <div class="sidebar" id="sidebar">
     <div class="logo">JANANI R</div>
     <ul>
+        <li><a href="#home">🏠 Home</a></li>
         <li><a href="#education">🎓 Education</a></li>
         <li><a href="#skills">💡 Skills</a></li>
         <li><a href="#internship">💼 Internship</a></li>
@@ -20,198 +26,86 @@
     </ul>
 </div>
 
-<!-- TOGGLE BUTTON -->
+<!-- Toggle Button -->
 <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
+<!-- Main Content -->
+<div class="main-content">
 
-<!-- HERO SECTION -->
-<section class="hero">
-    <div class="hero-content">
-        <img src="janani.jpeg" class="profile-img">
-        <h1>👩‍💻 Hello, I'm Janani</h1>
-        <h3>Aspiring Data Analyst | Data Visualization 📊 | Data Engineer 🚀</h3>
-        <p>
-            Passionate learner focused on transforming raw data into meaningful insights.
-            Strong in data analysis, visualization, and machine learning solutions.
-        </p>
-
-        <div class="buttons">
-            <a href="https://github.com/janani0673" target="_blank" class="btn">🌐 GitHub</a>
-            <a href="https://linkedin.com/in/YOUR-LINK" target="_blank" class="btn">💼 LinkedIn</a>
-            <a href="janani_resume.pdf" target="_blank" class="btn resume-btn">📄 View Resume</a>
-        </div>
-    </div>
+<!-- HERO -->
+<section id="home" class="hero section">
+    <img src="janani.jpeg" class="profile-img">
+    <h1>Hello, I'm Janani 👩‍💻</h1>
+    <h3><span class="typing"></span></h3>
+    <p>Passionate learner transforming raw data into meaningful insights.</p>
 </section>
-
-<hr>
 
 <!-- EDUCATION -->
 <section id="education" class="section">
     <h2>🎓 Education</h2>
 
-    <div class="timeline-item">
-        <h3>2023 – 2027</h3>
-        <h4>B.Tech – Artificial Intelligence & Data Science</h4>
+    <div class="card">
+        <h3>B.Tech – Artificial Intelligence & Data Science</h3>
         <p>Anna University Regional Campus, Coimbatore</p>
-        <p>CGPA: 7.9 (Up to 4th Semester)</p>
+        <p>CGPA: 7.9</p>
     </div>
 
-    <div class="timeline-item">
-        <h3>2022 – 2023</h3>
-        <h4>HSC</h4>
-        <p>V.R.P Higher Secondary School, Villupuram</p>
-        <p>Percentage: 89.33%</p>
-    </div>
-
-    <div class="timeline-item">
-        <h3>2020 – 2021</h3>
-        <h4>SSLC</h4>
-        <p>V.R.P Higher Secondary School, Villupuram</p>
-        <p>All Pass (Covid Batch)</p>
+    <div class="card">
+        <h3>HSC</h3>
+        <p>89.33%</p>
     </div>
 </section>
-
-<hr>
 
 <!-- SKILLS -->
 <section id="skills" class="section">
     <h2>💡 Skills</h2>
 
-    <div class="skills-grid">
+    <div class="progress">
+        <p>Python</p>
+        <div class="progress-bar"><span style="width:90%"></span></div>
+    </div>
 
-        <div class="skill-box">
-            <h3>🧠 Technical Skills</h3>
-            <ul>
-                <li>Python</li>
-                <li>C</li>
-                <li>Machine Learning</li>
-                <li>Deep Learning</li>
-                <li>SQL</li>
-                <li>Data Visualization</li>
-            </ul>
-        </div>
+    <div class="progress">
+        <p>Machine Learning</p>
+        <div class="progress-bar"><span style="width:85%"></span></div>
+    </div>
 
-        <div class="skill-box">
-            <h3>🛠 Tools</h3>
-            <ul>
-                <li>Figma</li>
-                <li>GitHub</li>
-                <li>Google Colab</li>
-                <li>Visual Studio Code</li>
-                <li>Excel</li>
-            </ul>
-        </div>
-
-        <div class="skill-box">
-            <h3>🌟 Soft Skills</h3>
-            <ul>
-                <li>Presentation</li>
-                <li>Leadership</li>
-                <li>Communication</li>
-                <li>Problem Solving</li>
-            </ul>
-        </div>
-
+    <div class="progress">
+        <p>SQL</p>
+        <div class="progress-bar"><span style="width:80%"></span></div>
     </div>
 </section>
-
-<hr>
-
-<!-- INTERNSHIP -->
-<section id="internship" class="section">
-    <h2>💼 Internship Experience</h2>
-
-    <div class="intern-card">
-        <div class="project-header">
-            <h3>Data Science Intern</h3>
-            <span class="year">2025</span>
-        </div>
-
-        <h4>Sangam Soft Solutions, Saravanampatti</h4>
-
-        <p>
-            DATA SCIENCE DOMAIN – SANGAM SOFT SOLUTIONS
-            Built an end-to-end Road Accident Severity Prediction application 
-            by applying real-world data science workflows, from data preprocessing to 
-            model deployment. Demonstrated strong analytical thinking, practical problem-solving
-            skills, and the ability to transform data into impactful solutions.
-            TECH STACKS: Python, Scikit-learn, Streamlit, Machine Learning
-        </p>
-    </div>
-</section>
-
-<hr>
 
 <!-- PROJECTS -->
 <section id="projects" class="section">
-    <h2>🚀 My Projects</h2>
+    <h2>🚀 Projects</h2>
 
-    <div class="project-card">
-        <div class="project-header">
-            <h3>AI Disease Prediction</h3>
-            <span class="year">May 2025</span>
-        </div>
-        <p>The AI Disease Prediction project uses machine learning to predict diseases 
-            from patient medical data. Data is processed using Pandas and visualized with
-            Matplotlib to identify patterns. A Decision Tree Classifier built with 
-            Scikit-learn performs the prediction. The model is deployed using Flask to 
-            provide instant results through a web interface.</p>
-        <a href="https://github.com/janani0673/ai-disease-prediction" target="_blank" class="view-btn">🔗 View Code</a>
+    <div class="card">
+        <h3>AI Disease Prediction</h3>
+        <p>Machine learning model for disease prediction using Scikit-learn.</p>
     </div>
 
-    <div class="project-card">
-        <div class="project-header">
-            <h3>Road Accident Severity Predictor</h3>
-            <span class="year">July 2025</span>
-        </div>
-        <p>The Road Accident Severity Predictor uses machine learning to predict 
-           the severity of road accidents based on accident-related factors. Data 
-           is analyzed and visualized using Seaborn to identify important patterns. 
-           A Random Forest Classifier built with Scikit-learn is used for accurate 
-           severity prediction. The system is deployed as a Streamlit application 
-           with report generation support</p>
-        <a href="https://github.com/janani0673/road-accident-severity-predictor" target="_blank" class="view-btn">🔗 View Code</a>
+    <div class="card">
+        <h3>Road Accident Severity Predictor</h3>
+        <p>Random Forest model deployed using Streamlit.</p>
     </div>
-
-    <div class="project-card">
-        <div class="project-header">
-            <h3>Pneumonia Detection</h3>
-            <span class="year">November 2025</span>
-        </div>
-        <p>The Pneumonia Detection project uses deep learning to identify pneumonia 
-           from medical images. A TensorFlow-based model analyzes input images to detect 
-           infection patterns. The system is deployed using Streamlit, allowing users to 
-           upload images and get instant results. Reports are generated with patient details 
-           and prediction time for easy documentation</p>
-        <a href="https://github.com/janani0673/pneumonia_detection" target="_blank" class="view-btn">🔗 View Code</a>
-    </div>
-
-    <div class="project-card">
-        <div class="project-header">
-            <h3>Heart Disease Prediction</h3>
-            <span class="year">January 2026</span>
-        </div>
-        <p>The Heart Disease Prediction project uses machine learning to predict 
-            the risk of heart disease from patient health data. Data is processed 
-            using Scikit-learn pipelines to ensure consistency and accuracy. 
-            A Random Forest Classifier is trained to provide reliable predictions.
-            The system helps in early detection and supports clinical decision-making</p>
-        <a href="https://github.com/janani0673/heart_disease_prediction" target="_blank" class="view-btn">🔗 View Code</a>
-    </div>
-
 </section>
-
-<hr>
 
 <!-- CONTACT -->
 <section id="contact" class="section">
     <h2>📬 Contact</h2>
-    <p>Email:jananiraguraman012@gmail.com</p>
-    <p>Linkedin:https://www.linkedin.com/in/janani-r-632a73290/</p>
-    <p>Github:https://github.com/janani0673</p>
+    <p>Email: jananiraguraman012@gmail.com</p>
+    <p>GitHub: github.com/janani0673</p>
 </section>
 
+</div>
+
+<!-- JavaScript -->
 <script>
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function(e) {
         e.preventDefault();
@@ -220,14 +114,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-const sections = document.querySelectorAll(".section");
+const text = "Aspiring Data Analyst | Data Visualization | Data Engineer";
+let index = 0;
+function typeEffect() {
+    if (index < text.length) {
+        document.querySelector(".typing").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 50);
+    }
+}
+window.onload = typeEffect;
 
+const sections = document.querySelectorAll(".section");
 window.addEventListener("scroll", () => {
     sections.forEach(sec => {
         const top = sec.getBoundingClientRect().top;
         if (top < window.innerHeight - 100) {
-            sec.style.opacity = "1";
-            sec.style.transform = "translateY(0)";
+            sec.classList.add("show");
         }
     });
 });
@@ -235,4 +138,3 @@ window.addEventListener("scroll", () => {
 
 </body>
 </html>
-
